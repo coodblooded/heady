@@ -23,7 +23,7 @@ function routes(Category, Products) {
             if (req.query.name) {
                 query.name = req.query.name
             }
-            Category.findOneAndUpdate(query,{$push: {child_cetegories: catetory_id}}, {new: true}, (err, category) => {
+            Category.findOneAndUpdate(query,{$push: {child_categories: catetory_id}}, {new: true}, (err, category) => {
                 if (err) {
                     return res.send(err)
                 }
